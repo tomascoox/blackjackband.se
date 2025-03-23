@@ -3,7 +3,7 @@ import Image from 'next/image';
 const Nyhetsarkiv = () => {
   return (
     <section id="nyhetsarkiv" className="w-full bg-white">
-      <div className="w-[1100px] mx-auto py-16">
+      <div className="container py-16">
         <h2 className="text-center">Nyhetsarkiv</h2>
         
         <div className="mt-8">

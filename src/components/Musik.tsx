@@ -18,7 +18,7 @@ const Album = ({ imageSrc, spotifyUri }: AlbumProps) => {
           alt="Album cover" 
           width={345} 
           height={345} 
-          className="w-full rounded-lg"
+          className="w-full h-auto rounded-lg"
         />
       </div>
       <div className="w-full">
@@ -70,7 +70,7 @@ const Musik = () => {
 
   return (
     <section id="musik" className="w-full bg-white">
-      <div className="w-[1100px] mx-auto py-16">
+      <div className="container py-16">
         <h2 className="text-center">Musik</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
           {albums.map((album, index) => (

@@ -8,8 +8,8 @@ const Concert = ({ date, venue, city }: ConcertProps) => {
   return (
     <div className="border-b border-gray-300 py-4">
       <div className="flex flex-col md:flex-row md:justify-between md:items-center">
-        <div className="text-lg font-medium">{date}</div>
-        <div className="text-xl font-bold">{venue}</div>
+        <div className="text-lg font-medium mb-1 md:mb-0">{date}</div>
+        <div className="text-xl font-bold mb-1 md:mb-0">{venue}</div>
         <div className="text-lg">{city}</div>
       </div>
     </div>
@@ -28,12 +28,14 @@ const Turne = () => {
   ];
 
   return (
-    <section id="turne" className="section-container bg-beige">
-      <h2 className="text-4xl font-bold mb-8 text-center">Turné</h2>
-      <div className="max-w-4xl mx-auto">
-        {concerts.map((concert, index) => (
-          <Concert key={index} {...concert} />
-        ))}
+    <section id="turne" className="w-full bg-beige">
+      <div className="container py-16">
+        <h2 className="text-center">Turné</h2>
+        <div className="mt-8">
+          {concerts.map((concert, index) => (
+            <Concert key={index} {...concert} />
+          ))}
+        </div>
       </div>
     </section>
   );

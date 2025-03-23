@@ -1,7 +1,7 @@
 const Kontakt = () => {
   return (
     <section id="kontakt" className="w-full bg-neutral-100">
-      <div className="w-[1100px] mx-auto py-16">
+      <div className="container py-16">
         <h2 className="text-center">Kontakt</h2>
         <div className="mt-8 text-center">
           <p className="font-bold">Mats Tigerström (Nöjeskallan)</p>
