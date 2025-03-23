@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Nyhetsarkiv = () => {
   return (
@@ -50,13 +51,30 @@ const Nyhetsarkiv = () => {
         </div>
         
         <div className="mt-12 flex flex-col items-center">
-          <Image 
-            src="/images/logo-spela-blackjack-300x50.png"
-            alt="Spela blackjack"
-            width={170}
-            height={30}
-          />
-          <p className="mt-2">Spela blackjack online med BlackJack.se</p>
+          <Link 
+            href="https://blackjack.se" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            title="Spela blackjack online på BlackJack.se - Sveriges bästa blackjack spel"
+            aria-label="Besök BlackJack.se för att spela blackjack online"
+          >
+            <Image 
+              src="/images/logo-spela-blackjack-300x50.png"
+              alt="BlackJack.se logo - Spela blackjack online"
+              width={170}
+              height={30}
+            />
+          </Link>
+          <Link 
+            href="https://blackjack.se" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="mt-2 hover:underline text-black font-medium"
+            title="Spela blackjack online på BlackJack.se"
+            aria-label="Klicka här för att spela blackjack online"
+          >
+            Spela blackjack online med BlackJack.se
+          </Link>
         </div>
       </div>
     </section>
