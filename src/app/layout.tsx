@@ -5,6 +5,7 @@ import Script from 'next/script';
 import { GA_MEASUREMENT_ID } from '@/lib/gtag';
 import Analytics from '@/components/Analytics';
 import { Suspense } from "react";
+import CookieConsent from "@/components/CookieConsent";
 
 const yanoneKaffeesatz = Yanone_Kaffeesatz({
   subsets: ["latin"],
@@ -50,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="sv">
       <body className={`${yanoneKaffeesatz.variable} ${specialElite.variable}`}>
-        {/* Google Analytics */}
+        {/* Google Analytics with Consent Mode */}
         <Script
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
@@ -63,7 +64,18 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${GA_MEASUREMENT_ID}');
+              
+              // Initialize with default consent settings
+              gtag('consent', 'default', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied'
+              });
+              
+              // Load with consent mode
+              gtag('config', '${GA_MEASUREMENT_ID}', {
+                'anonymize_ip': true,
+                'cookie_flags': 'SameSite=None;Secure'
+              });
             `,
           }}
         />
@@ -71,6 +83,7 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <Analytics />
         </Suspense>
+        <CookieConsent />
       </body>
     </html>
   );

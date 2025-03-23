@@ -1,4 +1,5 @@
 import React from 'react';
+import CookieSettings from '@/components/CookieSettings';
 
 export default function PrivacyPolicy() {
   const headingStyle = {
@@ -13,6 +14,8 @@ export default function PrivacyPolicy() {
         
         <div className="max-w-4xl mx-auto">
           <p className="mb-6" style={{ fontFamily: "Arial, Helvetica, sans-serif !important" }}>Senast uppdaterad: {new Date().toLocaleDateString('sv-SE')}</p>
+          
+          <CookieSettings />
           
           <h3 className="text-xl mb-4 mt-8" style={headingStyle}>1. Introduktion</h3>
           <p style={{ fontFamily: "Arial, Helvetica, sans-serif !important" }}>
