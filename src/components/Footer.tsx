@@ -4,7 +4,11 @@ const Footer = () => {
   return (
     <footer className="w-full bg-black text-white py-4">
       <div className="container grid grid-cols-3 items-center">
-        <div className="text-sm text-gray-400"></div>
+        <div className="text-sm text-gray-400">
+          <Link href="/privacy-policy" className="text-gray-400 hover:text-white hover:underline">
+            Integritetspolicy
+          </Link>
+        </div>
         
         <div className="flex justify-center items-center">
           <div className="text-sm text-gray-400 flex items-center">
