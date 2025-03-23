@@ -8,6 +8,10 @@ const Footer = () => {
           <Link href="/privacy-policy" className="text-gray-400 hover:text-white hover:underline">
             Integritetspolicy
           </Link>
+          <span className="mx-2">|</span>
+          <Link href="/data-deletion" className="text-gray-400 hover:text-white hover:underline">
+            Databorttagning
+          </Link>
         </div>
         
         <div className="flex justify-center items-center">
