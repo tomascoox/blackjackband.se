@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Link as ScrollLink } from 'react-scroll';
+import Link from 'next/link';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -109,15 +110,14 @@ const Navbar = () => {
               >
                 Nyhetsarkiv
               </ScrollLink>
-              <ScrollLink
-                to="webshop"
-                smooth={true}
-                duration={500}
-                offset={scrollOffset}
+              <Link
+                href="https://www.teamgrahn.com/merchandise/black-jack"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-dark hover:text-gray-600 cursor-pointer px-2 py-2 text-lg md:text-xl lg:text-2xl"
               >
                 Webshop
-              </ScrollLink>
+              </Link>
             </div>
           </div>
           
@@ -231,16 +231,15 @@ const Navbar = () => {
             >
               Nyhetsarkiv
             </ScrollLink>
-            <ScrollLink
-              to="webshop"
-              smooth={true}
-              duration={500}
-              offset={scrollOffset}
+            <Link
+              href="https://www.teamgrahn.com/merchandise/black-jack"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-dark block px-3 py-2 text-xl"
               onClick={closeMenu}
             >
               Webshop
-            </ScrollLink>
+            </Link>
           </div>
         </div>
       )}
