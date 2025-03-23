@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --foreground: #333333;
+  --background: #f5f0e5;
+  --font-yanone: 'Yanone Kaffeesatz', Helvetica, Arial, Lucida, sans-serif;
+  --font-special-elite: 'Special Elite', display;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+h1, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h2 {
+  font-family: var(--font-special-elite);
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  font-weight: normal;
+}
+
+.container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section-container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.navbar-font {
+  font-family: var(--font-yanone);
+}

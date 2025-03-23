@@ -1,0 +1,26 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        beige: "#f5f0e5",
+        dark: "#333333",
+      },
+      fontFamily: {
+        sans: ["Arial", "sans-serif"],
+      },
+      maxWidth: {
+        "7xl": "80rem",
+      },
+    },
+  },
+  plugins: [],
+};
+
+export default config; 
