@@ -9,13 +9,13 @@ interface AlbumProps {
   spotifyUri: string;
 }
 
-const Album = ({ imageSrc, spotifyUri }: AlbumProps) => {
+const Album = ({ title, imageSrc, spotifyUri }: AlbumProps) => {
   return (
     <div className="flex flex-col mb-8">
       <div className="w-full">
         <Image 
           src={imageSrc} 
-          alt="Album cover" 
+          alt={`${title} album cover`}
           width={345} 
           height={345} 
           className="w-full h-auto rounded-lg"
@@ -38,32 +38,32 @@ const Musik = () => {
   const albums = [
     { 
       title: 'En, två kanske tre', 
-      imageSrc: '/images/BlackJack-En-tva-kanske-tre-album.jpg', 
+      imageSrc: 'https://res.cloudinary.com/dlcfxe19d/image/upload/f_auto,q_auto/BlackJack-En-tva-kanske-tre-album_tkzyz2.jpg', 
       spotifyUri: 'spotify%3Aalbum%3A6Hh3YDyPrko4t2gbNYiUCh'
     },
     { 
       title: 'Rosalie', 
-      imageSrc: '/images/rosalie_spotify_album.jpg', 
+      imageSrc: 'https://res.cloudinary.com/dlcfxe19d/image/upload/f_auto,q_auto/v1742757907/rosalie_spotify_album_jrmuuy.jpg', 
       spotifyUri: 'spotify%3Aalbum%3A6aMsrCTpcQav50Y2R8LFjK'
     },
     { 
       title: 'I Natt I Natt', 
-      imageSrc: '/images/I-Natt-I-Natt.jpg', 
+      imageSrc: 'https://res.cloudinary.com/dlcfxe19d/image/upload/f_auto,q_auto/v1742758297/I-Natt-I-Natt_cc27fx.jpg', 
       spotifyUri: 'spotify%3Aalbum%3A5AVST0GePltPs0p6f82wRK'
     },
     { 
       title: '445644', 
-      imageSrc: '/images/445644.jpg', 
+      imageSrc: 'https://res.cloudinary.com/dlcfxe19d/image/upload/f_auto,q_auto/v1742758398/445644_dqqzsc.jpg', 
       spotifyUri: 'spotify%3Aalbum%3A0AhEyvsv7l4a6wTmhwzrb9'
     },
     { 
       title: 'Casino', 
-      imageSrc: '/images/Casino.jpg', 
+      imageSrc: 'https://res.cloudinary.com/dlcfxe19d/image/upload/f_auto,q_auto/v1742758386/Casino_atmhyx.jpg', 
       spotifyUri: 'spotify%3Aalbum%3A6jHXFWyM4ecQfZKeuuXUll'
     },
     { 
       title: 'Festival', 
-      imageSrc: '/images/Festival.jpg', 
+      imageSrc: 'https://res.cloudinary.com/dlcfxe19d/image/upload/f_auto,q_auto/v1742758533/Festival_kh9hkh.jpg', 
       spotifyUri: 'spotify%3Aalbum%3A0Uzqzp7vDomyreKunkP5HD'
     },
   ];
