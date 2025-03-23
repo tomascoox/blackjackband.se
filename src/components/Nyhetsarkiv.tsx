@@ -8,11 +8,11 @@ const Nyhetsarkiv = () => {
         
         <div className="mt-8">
           <p className="mb-4">
-            Black Jack behöver nog inte någon längre presentation utan tillhör ett av Sveriges största och populäraste dansband. Mycket tack vare mastodont hiten <strong>"Inatt Inatt-Inget stoppar oss nu"</strong> som är den dansbandslåt som streamat i särklass mest på Spotify.
+            Black Jack behöver nog inte någon längre presentation utan tillhör ett av Sveriges största och populäraste dansband. Mycket tack vare mastodont hiten <strong>&quot;Inatt Inatt-Inget stoppar oss nu&quot;</strong> som är den dansbandslåt som streamat i särklass mest på Spotify.
           </p>
           
           <p className="mb-4">
-            Bandet startades 1990-91 i samband med Colin Nutleys film "Black Jack". Det var just med låten "Inget kan stoppa oss nu" även kallad "Inatt Inatt" som bandet fick sitt genombrott, signerad Lasse Holm och Ingela "Pling" Forsman.
+            Bandet startades 1990-91 i samband med Colin Nutleys film &quot;Black Jack&quot;. Det var just med låten &quot;Inget kan stoppa oss nu&quot; även kallad &quot;Inatt Inatt&quot; som bandet fick sitt genombrott, signerad Lasse Holm och Ingela &quot;Pling&quot; Forsman.
           </p>
           
           <p className="mb-4">
@@ -20,23 +20,23 @@ const Nyhetsarkiv = () => {
           </p>
           
           <p className="mb-4">
-            EPA remixer har det också blivit och under "Inatt" ( Inget stoppar oss nu) lever låten återigen ett nytt liv genom Ellen Krauss tolkning i "Så mycket bättre".
+            EPA remixer har det också blivit och under &quot;Inatt&quot; ( Inget stoppar oss nu) lever låten återigen ett nytt liv genom Ellen Krauss tolkning i &quot;Så mycket bättre&quot;.
           </p>
           
           <p className="mb-4">
-            "Corrine, Corrina", "Sista dansen, "Får jag låna din fru i kväll", "Om det känns rätt" är för att nämna några av de hitlåtar som är starkt förknippade med bandet.
+            &quot;Corrine, Corrina&quot;, &quot;Sista dansen, &quot;Får jag låna din fru i kväll&quot;, &quot;Om det känns rätt&quot; är för att nämna några av de hitlåtar som är starkt förknippade med bandet.
           </p>
           
           <p className="mb-4">
-            Black Jack har gjort ett flertal album och haft ett tiotal låtar med på Svensktoppen. Den mest framgångsrika är " Om det känns rätt " som låg etta 1996.
+            Black Jack har gjort ett flertal album och haft ett tiotal låtar med på Svensktoppen. Den mest framgångsrika är &quot; Om det känns rätt &quot; som låg etta 1996.
           </p>
           
           <p className="mb-4">
-            2020 största dansbandslåt på Spotify var Black Jacks och det med låten <strong>"Kåt, glad och tacksam."</strong> En titel hämtad från filmen "Ogifta par" och Peter Dalles klassiska kommentar.
+            2020 största dansbandslåt på Spotify var Black Jacks och det med låten <strong>&quot;Kåt, glad och tacksam.&quot;</strong> En titel hämtad från filmen &quot;Ogifta par&quot; och Peter Dalles klassiska kommentar.
           </p>
           
           <p className="mb-4">
-            Under åren har Black Jack varit med i flera underhållningsprogram i TV, bl.a. Sommarkrysset, QX – Galan, Jeopardy, Mat Tina, Gokväll, Bingolotto, Nyhetsmorgon etc.2016 sände SVT dokumentären <strong>"Black Jack – från film till verklighet"</strong> som sågs av en miljonpublik.
+            Under åren har Black Jack varit med i flera underhållningsprogram i TV, bl.a. Sommarkrysset, QX – Galan, Jeopardy, Mat Tina, Gokväll, Bingolotto, Nyhetsmorgon etc.2016 sände SVT dokumentären <strong>&quot;Black Jack – från film till verklighet&quot;</strong> som sågs av en miljonpublik.
           </p>
           
           <div className="mt-6">
