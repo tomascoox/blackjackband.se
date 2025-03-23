@@ -3,6 +3,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Force the bg-beige class to work correctly */
+.bg-beige {
+  background-color: #f5f0e5 !important;
+}
+
 :root {
   --font-yanone: 'Yanone Kaffeesatz', Helvetica, Arial, Lucida, sans-serif;
   --font-special-elite: 'Special Elite', display;
