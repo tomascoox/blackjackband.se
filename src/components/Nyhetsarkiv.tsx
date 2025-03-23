@@ -4,7 +4,7 @@ const Nyhetsarkiv = () => {
   return (
     <section id="nyhetsarkiv" className="w-full bg-white">
       <div className="container py-16">
-        <h2 className="text-center">Nyhetsarkiv</h2>
+        <h2 className="text-center text-4xl md:text-5xl lg:text-6xl">Nyhetsarkiv</h2>
         
         <div className="mt-8">
           <p className="mb-4">

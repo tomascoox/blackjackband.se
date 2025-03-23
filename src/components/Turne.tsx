@@ -4,7 +4,7 @@ const Turne = () => {
   return (
     <section id="turne" className="w-full bg-beige">
       <div className="container py-16">
-        <h2 className="text-center">Turné</h2>
+        <h2 className="text-center text-4xl md:text-5xl lg:text-6xl">Turné</h2>
         <div className="mt-8">
           <iframe 
             id="cal" 

@@ -5,7 +5,7 @@ const Press = () => {
   return (
     <section id="press" className="w-full bg-beige">
       <div className="container py-16">
-        <h2 className="text-center">Press</h2>
+        <h2 className="text-center text-4xl md:text-5xl lg:text-6xl">Press</h2>
         
         {/* Logo Images */}
         <div className="mt-8 mb-12 flex flex-col items-center">

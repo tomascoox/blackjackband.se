@@ -71,7 +71,7 @@ const Musik = () => {
   return (
     <section id="musik" className="w-full bg-white">
       <div className="container py-16">
-        <h2 className="text-center">Musik</h2>
+        <h2 className="text-center text-4xl md:text-5xl lg:text-6xl">Musik</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
           {albums.map((album, index) => (
             <Album key={index} {...album} />
