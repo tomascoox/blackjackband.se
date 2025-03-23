@@ -20,6 +20,25 @@ const specialElite = Special_Elite({
 export const metadata: Metadata = {
   title: "BlackJack - Dansband från Sverige",
   description: "BlackJack är ett svenskt dansband. Boka oss för spelningar och evenemang.",
+  icons: {
+    icon: [
+      { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    shortcut: '/favicon/favicon.ico',
+    apple: '/favicon/apple-touch-icon.png',
+    other: [
+      {
+        rel: 'manifest',
+        url: '/favicon/site.webmanifest',
+      },
+    ],
+  },
+  other: {
+    'msapplication-TileColor': '#da532c',
+    'msapplication-config': '/favicon/browserconfig.xml',
+    'theme-color': '#ffffff',
+  },
 };
 
 export default function RootLayout({
