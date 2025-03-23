@@ -4,6 +4,7 @@ import "./globals.css";
 import Script from 'next/script';
 import { GA_MEASUREMENT_ID } from '@/lib/gtag';
 import Analytics from '@/components/Analytics';
+import { Suspense } from "react";
 
 const yanoneKaffeesatz = Yanone_Kaffeesatz({
   subsets: ["latin"],
@@ -67,7 +68,9 @@ export default function RootLayout({
           }}
         />
         {children}
-        <Analytics />
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
       </body>
     </html>
   );
