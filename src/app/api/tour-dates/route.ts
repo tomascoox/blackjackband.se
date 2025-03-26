@@ -10,7 +10,10 @@ interface TourDate {
 
 export async function GET() {
   try {
-    const response = await fetch('https://www.spelplan.com/artist/p/c.aspx?id=9abd5e045cc54fa');
+    const response = await fetch('https://www.spelplan.com/artist/p/c.aspx?id=9abd5e045cc54fa', {
+      cache: 'no-store'
+    });
+    
     if (!response.ok) {
       console.error('Failed to fetch from spelplan.com:', response.status, response.statusText);
       throw new Error('Failed to fetch from spelplan.com');
@@ -71,7 +74,15 @@ export async function GET() {
       }
     });
 
-    return NextResponse.json(tourDates);
+    // Set cache headers to ensure fresh data (max 15 minutes cache)
+    return NextResponse.json(
+      tourDates,
+      {
+        headers: {
+          'Cache-Control': 'public, max-age=900, s-maxage=900, stale-while-revalidate=3600'
+        }
+      }
+    );
   } catch (error) {
     console.error('Error fetching tour dates:', error);
     return NextResponse.json({ error: 'Failed to fetch tour dates' }, { status: 500 });

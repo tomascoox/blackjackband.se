@@ -14,22 +14,33 @@ const Turne = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const fetchTourDates = async () => {
-      try {
-        const response = await fetch('/api/tour-dates');
-        if (!response.ok) throw new Error('Failed to fetch tour dates');
-        const data = await response.json();
-        setTourDates(data);
-      } catch (err) {
-        setError('Could not load tour dates');
-        console.error('Error fetching tour dates:', err);
-      } finally {
-        setIsLoading(false);
-      }
-    };
+  const fetchTourDates = async () => {
+    try {
+      setIsLoading(true);
+      const response = await fetch('/api/tour-dates', { 
+        cache: 'no-store',
+        next: { revalidate: 0 }
+      });
+      if (!response.ok) throw new Error('Failed to fetch tour dates');
+      const data = await response.json();
+      setTourDates(data);
+    } catch (err) {
+      setError('Could not load tour dates');
+      console.error('Error fetching tour dates:', err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
+  useEffect(() => {
     fetchTourDates();
+    
+    // Set up auto-refresh every 15 minutes
+    const refreshInterval = setInterval(() => {
+      fetchTourDates();
+    }, 15 * 60 * 1000);
+    
+    return () => clearInterval(refreshInterval);
   }, []);
 
   // Group dates by month and year
@@ -50,7 +61,7 @@ const Turne = () => {
       <div className="container py-16">
         <h2 className="text-center text-4xl md:text-5xl lg:text-6xl">Turné</h2>
         <div className="mt-8">
-          {isLoading ? (
+          {isLoading && tourDates.length === 0 ? (
             <div className="flex justify-center items-center h-32">
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900"></div>
             </div>
