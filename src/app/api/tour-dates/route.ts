@@ -26,7 +26,7 @@ export async function GET() {
     let currentMonth = '';
     let currentYear = '';
     
-    $('table tr').each((i: number, element: cheerio.Element) => {
+    $('table tr').each((i: number, element: any) => {
       const row = $(element);
       
       // Check if this is a month header row
