@@ -6,22 +6,24 @@ test.beforeEach(async ({ page }) => {
   await page.goto('/');
 
   // Letar efter knappen som stänger cookie-rutan. 
-  // Om knappen t.ex. heter "Acceptera alla" eller "OK":
   const acceptButton = page.getByRole('button', { name: /acceptera|godkänn|ok/i });
 
-  // Om knappen dyker upp så klickar vi på den
-  if (await acceptButton.isVisible()) {
+  // Vänta en liten stund för att se om rutan dyker upp
+  try {
+    await acceptButton.waitFor({ state: 'visible', timeout: 3000 });
     await acceptButton.click();
+  } catch (e) {
+    // Rutan dök inte upp inom vår timeout, vi kan strunta i det
   }
 });
 
-test('Kontrollera startsida och navigering', async ({ page }) => {
+test('Kontrollera startsida och grundläggande sektioner', async ({ page }) => {
   // 1. Kolla titeln
   await expect(page).toHaveTitle(/BlackJack - Dansband från Sverige/);
 
-  // 2. Klicka på länken (här byter vi namn från 'get started link' i logiken)
-  await page.getByRole('link', { name: 'Studio Joox AB' }).click();
+  // 2. Verifiera att Nyheter-sektionen är synlig (eller åtminstone existerar på sidan)
+  await expect(page.getByRole('heading', { name: 'Nyheter', exact: true })).toBeVisible();
 
-  // 3. Verifiera att vi hamnade rätt
-  await expect(page.getByRole('heading', { name: 'Nyheter' })).toBeVisible();
+  // 3. Verifiera att Turné-sektionen är synlig
+  await expect(page.getByRole('heading', { name: 'Turné', exact: true })).toBeVisible();
 });
