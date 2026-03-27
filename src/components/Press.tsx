@@ -53,6 +53,10 @@ const Press = () => {
             </div>
           ))}
         </div>
+
+        <div className="mt-12 text-center text-brown/40 text-sm font-medium italic">
+          Foto: Mats Oscarsson
+        </div>
       </div>
     </section>
   );
