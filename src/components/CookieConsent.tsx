@@ -35,7 +35,7 @@ export default function CookieConsent() {
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetContent side="bottom" className="max-w-full sm:max-w-full rounded-t-lg border-t px-4 py-3">
+      <SheetContent side="bottom" aria-describedby={undefined} className="max-w-full sm:max-w-full rounded-t-lg border-t px-4 py-3">
         <SheetHeader className="sr-only">
           <SheetTitle>Cookie-inställningar</SheetTitle>
         </SheetHeader>
