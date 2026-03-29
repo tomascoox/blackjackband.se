@@ -35,7 +35,7 @@ export default function CookieConsent() {
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetContent side="bottom" className="max-w-full sm:max-w-full rounded-t-lg border-t py-3">
+      <SheetContent side="bottom" className="max-w-full sm:max-w-full rounded-t-lg border-t px-4 py-3">
         <SheetHeader className="sr-only">
           <SheetTitle>Cookie-inställningar</SheetTitle>
         </SheetHeader>
@@ -48,13 +48,13 @@ export default function CookieConsent() {
                 <a href="/privacy-policy" className="text-primary underline">integritetspolicy</a>.
               </p>
             </div>
-            
-            <SheetFooter className="sm:justify-end flex flex-col sm:flex-row gap-2 md:col-span-4">
-              <Button onClick={acceptAll} className="w-full sm:w-auto" size="sm">
-                Acceptera alla
-              </Button>
-              <Button onClick={acceptNecessary} variant="outline" className="w-full sm:w-auto" size="sm">
+
+            <SheetFooter className="flex-row justify-end gap-2 p-0 md:col-span-4">
+              <Button onClick={acceptNecessary} variant="outline" size="sm">
                 Endast nödvändiga
+              </Button>
+              <Button onClick={acceptAll} size="sm">
+                Acceptera alla
               </Button>
             </SheetFooter>
           </div>
