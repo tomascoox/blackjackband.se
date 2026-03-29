@@ -63,6 +63,7 @@ const Nyhetsarkiv = () => {
               alt="BlackJack.se logo - Spela blackjack online"
               width={170}
               height={30}
+              style={{ width: 'auto', height: '30px' }}
             />
           </Link>
           <Link 

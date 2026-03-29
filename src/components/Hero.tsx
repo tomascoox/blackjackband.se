@@ -12,6 +12,7 @@ const Hero = () => {
         height={1167}
         priority
         className="w-full h-auto"
+        style={{ height: 'auto' }}
       />
     </section>
   );
