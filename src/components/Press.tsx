@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 const Press = () => {
   const images = [
+    { id: 'poster2026', url: 'https://res.cloudinary.com/dlcfxe19d/image/upload/v1775060784/bj_poster_2026_fb2_zmdskp.jpg' },
     { id: '17', url: 'https://res.cloudinary.com/dlcfxe19d/image/upload/v1774603872/BJ_17_jhvfgl.jpg' },
     { id: '18', url: 'https://res.cloudinary.com/dlcfxe19d/image/upload/v1774603880/BJ_18_wbjsyj.jpg' },
     { id: '07', url: 'https://res.cloudinary.com/dlcfxe19d/image/upload/v1774603874/GRUPP-BJ_07_hjz7kz.jpg' },
